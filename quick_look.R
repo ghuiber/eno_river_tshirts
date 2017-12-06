@@ -18,8 +18,11 @@ shirble %>%
   group_by(Logo) %>% 
   tally()
 
-# I want a charcoal Firefly men's small
+# I want a charcoal Firefly men's small. Make order:
 shirble %>% 
   filter(Logo == 'Firefly' & 
            Type == 'Mens' & 
-           Size == 'Small')
+           Size == 'Small' & Color == 'Charcoal') %>% 
+  mutate(`# Desired` = 1) %>% 
+  knitr::kable() %>% 
+  print()
