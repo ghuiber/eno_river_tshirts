@@ -22,7 +22,8 @@ shirble %>%
 shirble %>% 
   filter(Logo == 'Firefly' & 
            Type == 'Mens' & 
-           Size == 'Small' & Color == 'Charcoal') %>% 
+           Size == 'Small' & 
+           Color == 'Charcoal') %>% 
   mutate(`# Desired` = 1) %>% 
   knitr::kable() %>% 
   print()
